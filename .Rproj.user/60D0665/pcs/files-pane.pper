@@ -1,0 +1,9 @@
+{
+    "path" : "~/bin/socks",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

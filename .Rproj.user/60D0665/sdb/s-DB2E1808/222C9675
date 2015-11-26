@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\n#parameters for socks\n#Number of pairs in use\n#Average number of days wear per sock\n#Variability in sock wear\n#Chance of sock death per day use\n#Number of sock pairs to simulate\nlibrary(shiny)\n\n\n\nshinyUI(pageWithSidebar(\n  headerPanel('Sock Simulator'),\n  sidebarPanel(\n    sliderInput(\"n_pairs\", \"Number of sock pairs in use:\", min = 1, max = 20, value = 10),\n    sliderInput(\"ave_wear_days\", \"Average number of days you get out of each sock:\", min = 1, max = 100, value = 50, step = 1),\n    sliderInput(\"wear_var\", \"Amount of variation in wear per day:\", min = 0, max = 10, value = 5.0, step = 0.1),\n    sliderInput(\"death_chance\", \"Chance of a sock being destroyed each day it is worn (in %):\", min = 0.0, max = 10.0, value = 1.0, step = 0.1),\n    sliderInput(\"n_sim\", \"Number of sock pairs simulated :\", min = 10, max = 1000, value = 100, step = 10),\n    p(actionButton(\"recalc\",\n                   \"Re-run sock simulation\", icon(\"random\"))\n    )\n  ),\n  mainPanel(\n    plotOutput('distPlot',height=\"600px\")\n  )\n)\n)",
+    "created" : 1448502371802.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "859728610",
+    "id" : "222C9675",
+    "lastKnownWriteTime" : 1448514502,
+    "path" : "~/bin/socks/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
